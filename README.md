@@ -22,3 +22,7 @@ mail_service/
 │
 ├── main.py               # Точка входа ASGI
 └── Dockerfile
+
+Запуск API => uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+Запуск Celery-воркера => celery -A tasks.worker.celery_app worker --loglevel=info
+
